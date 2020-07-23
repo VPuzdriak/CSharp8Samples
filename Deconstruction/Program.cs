@@ -7,7 +7,6 @@ namespace Deconstruction
     {
         static void Main(string[] args)
         {
-            Sample4();
         }
 
         private static void Sample1()

@@ -7,7 +7,6 @@ namespace IndicesAndRanges
     {
         static void Main(string[] args)
         {
-            Sample12();
         }
 
         private static void Sample1()
