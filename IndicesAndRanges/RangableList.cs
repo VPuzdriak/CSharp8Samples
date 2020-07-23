@@ -6,13 +6,11 @@ namespace IndicesAndRanges
 {
     public class RangableList<T>
     {
-        private List<T> _list = new List<T>();
-
-        public T this[Index index]
-            => _list[index];
+        private readonly List<T> _list;
 
         public RangableList()
         {
+            _list = new List<T>();
         }
 
         public RangableList(IEnumerable<T> collection)
@@ -20,6 +18,8 @@ namespace IndicesAndRanges
             _list = collection?.ToList();
         }
 
+        public T this[Index index] => _list[index];
+        
         public RangableList<T> this[Range range]
         {
             get
