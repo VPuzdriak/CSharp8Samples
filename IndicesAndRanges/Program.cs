@@ -15,6 +15,7 @@ namespace IndicesAndRanges
             
             int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+            //Index instance can be passed to indexer property
             var firstElIndex = new Index(0);
             Console.WriteLine(arr[firstElIndex]);
             
@@ -27,6 +28,7 @@ namespace IndicesAndRanges
             
             int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+            //Index can be initilized with int value, because of implicit operator
             Index fourthElIndex = 3;
             Console.WriteLine(arr[fourthElIndex]);
             
@@ -39,6 +41,7 @@ namespace IndicesAndRanges
             
             int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+            //Index can be described as number from the end
             var lastElIndex = new Index(1, true);
             Console.WriteLine(arr[lastElIndex]);
             
@@ -51,6 +54,7 @@ namespace IndicesAndRanges
             
             int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+            //Another way to describe that number is taken from the end
             Index secondFromTheEndElIndex = ^2;
             Console.WriteLine(arr[secondFromTheEndElIndex]);
             
@@ -63,6 +67,7 @@ namespace IndicesAndRanges
             
             int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+            //Range contains low and high indices
             var fromSecondTillFifthRange = new Range(new Index(1), new Index(4));
 
             string result = string.Join(",", arr[fromSecondTillFifthRange]);
@@ -77,6 +82,7 @@ namespace IndicesAndRanges
             
             int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+            //Another way how to use a range
             int[] fromThirdTillSixth = arr[2..6];
 
             string result = string.Join(",", fromThirdTillSixth);
@@ -90,6 +96,8 @@ namespace IndicesAndRanges
             Console.WriteLine("--------------Sample 7------------------");
             
             int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            
+            //Range cannot be used from the higher to lower index in arrays
             //int[] fromThirdTillSixth = arr[^1..0]; - Will throw ArgumentOutOfRangeException
             
             Console.WriteLine("----------End of Sample 7---------------");
@@ -100,6 +108,8 @@ namespace IndicesAndRanges
             Console.WriteLine("--------------Sample 8------------------");
             
             var list = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            
+            //Index can be used in List<T>
             int secondFromTheEnd = list[^2];
             Console.WriteLine(secondFromTheEnd);
             
@@ -111,6 +121,8 @@ namespace IndicesAndRanges
             Console.WriteLine("--------------Sample 9------------------");
             
             var list = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            
+            //Range cannot be used in List<T>
             //int secondFromTheEnd = list[2..4]; - Does not compile.
             
             Console.WriteLine("----------End of Sample 9---------------");
@@ -121,6 +133,8 @@ namespace IndicesAndRanges
             Console.WriteLine("--------------Sample 10------------------");
             
             var firstName = "Volodymyr";
+            
+            //Range can be used to take a substring 
             string subStr = firstName[2..^2];
             Console.WriteLine(subStr);
             
@@ -133,6 +147,7 @@ namespace IndicesAndRanges
             
             var rangableList = new RangableList<int>(new[] {1, 2, 3, 4, 5});
 
+            //Using custom created indexer in custom type
             int fourthFromTheEnd = rangableList[^4];
             Console.WriteLine(fourthFromTheEnd);
             
@@ -146,6 +161,7 @@ namespace IndicesAndRanges
             var rangableList = new RangableList<int>();
             rangableList.Add(1, 2, 3, 4, 5);
 
+            //Using higher to lower index in custom type
             RangableList<int> newRangableList = rangableList[^1..^4];
             Console.WriteLine(newRangableList);
             

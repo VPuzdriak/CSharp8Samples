@@ -14,6 +14,8 @@ namespace Deconstruction
             Console.WriteLine("--------------Sample 1------------------");
             
             var city = new City("Chernivtsi", "Ukraine", 1408);
+            
+            //GetInfo returns ValueTuple<string, string, int>
             (string name, string country, int setupYear) cityInfo = city.Getinfo();
 
             Console.WriteLine(
@@ -27,6 +29,9 @@ namespace Deconstruction
             Console.WriteLine("--------------Sample 2------------------");
             
             var city = new City("Chernivtsi", "Ukraine", 1408);
+            
+            //Tuple can be deconstructed without types specification
+            //Values in Tupe can be skipped
             var (cityName, _, citySetupYear) = city.Getinfo();
 
             Console.WriteLine($"{cityName} is the city, which has been set up in {citySetupYear}");
@@ -39,6 +44,8 @@ namespace Deconstruction
             Console.WriteLine("--------------Sample 3------------------");
             
             var city = new City("Chernivtsi", "Ukraine", 1408);
+            
+            //City implements Deconstruct method
             var (cityName, cityCountry, _) = city;
 
             Console.WriteLine($"{cityName} is the city of {cityCountry}");
@@ -56,6 +63,7 @@ namespace Deconstruction
                 {"How are you?", "Hoe gaat het?"}
             };
 
+            //Deconstruction of KeyValuePair<string, string>
             foreach (var (english, dutch) in englishDutchDictionary)
             {
                 Console.WriteLine($"English: {english}. Dutch: {dutch}");
@@ -75,6 +83,7 @@ namespace Deconstruction
             // a = b;
             // b = temp;
 
+            //Use deconstruction to swap variable values
             (a, b) = (b, a);
 
             Console.WriteLine($"{a} {b}");
