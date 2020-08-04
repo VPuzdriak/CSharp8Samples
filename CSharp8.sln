@@ -1,10 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableReferenceTypes", "NullableReferenceTypes\NullableReferenceTypes.csproj", "{1D5DB78F-4A1E-485B-969F-2D3E27FE6489}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullableReferenceTypes", "NullableReferenceTypes\NullableReferenceTypes.csproj", "{1D5DB78F-4A1E-485B-969F-2D3E27FE6489}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndicesAndRanges", "IndicesAndRanges\IndicesAndRanges.csproj", "{4416686D-2FB9-46CB-8228-86FE5486EB48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndicesAndRanges", "IndicesAndRanges\IndicesAndRanges.csproj", "{4416686D-2FB9-46CB-8228-86FE5486EB48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deconstruction", "Deconstruction\Deconstruction.csproj", "{9EE975DF-1718-4682-AF0B-DDF848B11069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deconstruction", "Deconstruction\Deconstruction.csproj", "{9EE975DF-1718-4682-AF0B-DDF848B11069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternMatching", "PatternMatching\PatternMatching.csproj", "{44A41FFC-14F0-44EF-9A61-6680F5D324B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,7 +29,15 @@ Global
 		{9EE975DF-1718-4682-AF0B-DDF848B11069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EE975DF-1718-4682-AF0B-DDF848B11069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EE975DF-1718-4682-AF0B-DDF848B11069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A41FFC-14F0-44EF-9A61-6680F5D324B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A41FFC-14F0-44EF-9A61-6680F5D324B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A41FFC-14F0-44EF-9A61-6680F5D324B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A41FFC-14F0-44EF-9A61-6680F5D324B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E3085F6-1C1A-475A-BDAF-A77BBB22267D}
 	EndGlobalSection
 EndGlobal
