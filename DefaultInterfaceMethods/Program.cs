@@ -2,7 +2,7 @@
 
 namespace DefaultInterfaceMethods
 {
-	class Program
+	interface IProgram
 	{
 		static void Main(string[] args)
 		{
